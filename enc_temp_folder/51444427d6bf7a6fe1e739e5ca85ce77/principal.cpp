@@ -2230,15 +2230,7 @@ bool atribuicao() {
 		// Faz a checagem com a tabela de símbolos
 		for (j = 0; strcmp(TABELA_SIMBOLOS[j].variavel_nome, "") != 0; j++) {
 			if (strcmp(SEQ_TOKENS[NUM_TOKEN_ATUAL - 1].caracter, TABELA_SIMBOLOS[j].variavel_nome) == 0) {
-				// Aqui pode ter o sinal de < para fazer com que o procedimento use o escopo global mas não o contrário
 				if (TABELA_SIMBOLOS[j].variavel_escopo == INDICE_ESCOPO) {
-					// Aqui será feita a comparação dos tipos
-					if (TABELA_SIMBOLOS[j].variavel_tipo == SEQ_TOKENS[NUM_TOKEN_ATUAL - 1].valor) {
-
-						//Se o tipo for igual, faz o strcpy
-					}
-
-					
 					varValida = true;
 					tipoValido = TABELA_SIMBOLOS[j].variavel_tipo;
 					break;
