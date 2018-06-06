@@ -50,7 +50,7 @@ struct MyStruct
 {
 	int valor;
 	char caracter[25];
-}SEQ_TOKENS[5000];
+}SEQ_TOKENS[150];
 
 struct MyStruct2
 {
@@ -1916,7 +1916,12 @@ bool programa() {
 		if (identificador(SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor) == true) {
 			if (bloco() == true) {
 				if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == FIMPROGRAMA)
+				{
+					INDICE_ESCOPO--;
 					return true;
+				}
+			
+					
 				else {
 					NUM_TOKEN_ATUAL--;
 					printf("Erro! esperava palavra reservada 'Fimprograma'");
@@ -2090,6 +2095,15 @@ bool declaracao_procedimento() {
 						//Todos que ocorrerem aqui estarão em em escopo diferente
 						if (bloco() == true) {
 							if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == FIMPROCEDIMENTO) {
+
+								int y = 0;
+								int temp2 = INDICE_SIMBOLO;
+								for (int y = 0; y < temp2; y++) {
+									if (TABELA_SIMBOLOS[y].variavel_escopo == INDICE_ESCOPO)
+										INDICE_SIMBOLO--;
+								}
+
+
 								INDICE_ESCOPO--;
 								return true;
 							} else {
@@ -2225,34 +2239,27 @@ int tipoValido;
 bool atribuicao() {
 	int temp = SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor;
 	if (variavel(temp) == true) {
-		int j;
+		char* variavelTemp = SEQ_TOKENS[NUM_TOKEN_ATUAL-1].caracter;
 
-		// Faz a checagem com a tabela de símbolos
-		for (j = 0; strcmp(TABELA_SIMBOLOS[j].variavel_nome, "") != 0; j++) {
-			if (strcmp(SEQ_TOKENS[NUM_TOKEN_ATUAL - 1].caracter, TABELA_SIMBOLOS[j].variavel_nome) == 0) {
-				// Aqui pode ter o sinal de < para fazer com que o procedimento use o escopo global mas não o contrário
-				if (TABELA_SIMBOLOS[j].variavel_escopo == INDICE_ESCOPO) {
-					// Aqui será feita a comparação dos tipos
-					if (TABELA_SIMBOLOS[j].variavel_tipo == SEQ_TOKENS[NUM_TOKEN_ATUAL - 1].valor) {
+		if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == ATRIBUICAO) {
+			char* valorTemp = SEQ_TOKENS[NUM_TOKEN_ATUAL].caracter;
+			int j;
 
-						//Se o tipo for igual, faz o strcpy
-					}
-
-					
-					varValida = true;
+			for (j = INDICE_SIMBOLO - 1; j >0; j--) {
+				if (strcmp(TABELA_SIMBOLOS[j].variavel_nome, variavelTemp) == 0) {
+					strcpy(TABELA_SIMBOLOS[j].variavel_valor, valorTemp);
 					tipoValido = TABELA_SIMBOLOS[j].variavel_tipo;
 					break;
 				}
-			}
-		}
-		if (varValida != true)printf("Erro semantico, variavel fora do escopo, ou não existe!");
-		varValida = false;
 
-		if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == ATRIBUICAO) {
+			}
+			
 			if (expressao() == true) {
 
-				if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == PONTOEVIRGULA)
+				if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == PONTOEVIRGULA){
 					return true;
+				}
+					
 				else {
 					NUM_TOKEN_ATUAL = NUM_TOKEN_ATUAL - 3;
 					printf("Erro! esperava o simbolo  ';'");

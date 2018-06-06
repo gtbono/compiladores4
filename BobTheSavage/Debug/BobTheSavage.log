@@ -1,6 +1,6 @@
 ﻿  principal.cpp
 c:\users\gtbono\downloads\bobthesavage\bobthesavage\bobthesavage\principal.cpp(164): warning C4102: 'q0': unreferenced label
 c:\users\gtbono\downloads\bobthesavage\bobthesavage\bobthesavage\principal.cpp(1706): warning C4102: 'q134': unreferenced label
-c:\users\gtbono\downloads\bobthesavage\bobthesavage\bobthesavage\principal.cpp(2278): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'MyStruct'
-c:\users\gtbono\downloads\bobthesavage\bobthesavage\bobthesavage\principal.cpp(2420): warning C4715: 'comando_repetitivo': not all control paths return a value
+c:\users\gtbono\downloads\bobthesavage\bobthesavage\bobthesavage\principal.cpp(2293): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'MyStruct'
+c:\users\gtbono\downloads\bobthesavage\bobthesavage\bobthesavage\principal.cpp(2435): warning C4715: 'comando_repetitivo': not all control paths return a value
   BobTheSavage.vcxproj -> C:\Users\gtbono\Downloads\BobTheSavage\BobTheSavage\Debug\BobTheSavage.exe
