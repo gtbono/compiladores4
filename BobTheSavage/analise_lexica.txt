@@ -12,9 +12,7 @@ procedimento pro ( inteiro : a1 )
 fimprocedimento ; 
 a = 2 ; 
 b = 10 ; 
-dd = 1 ; 
-c = 11 ; 
-a = b + c ; 
+c = 1 ; 
 d = verdadeiro ; 
 e = falso ; 
 a = 1 ; 

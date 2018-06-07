@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+typedef int bool;
 #define true 1
 #define false 0
 
@@ -142,7 +143,7 @@ int main() {
 	}
 
 
-	printf("Ola bobinho lindo\n");
+	printf("Compilador executado\n");
 	SEQ_TOKENS[NUM_TOKEN_ATUAL].valor = 0;
 	//Aqui começa o identificador sintatico
 	NUM_TOKEN_ATUAL = 0;
@@ -167,7 +168,6 @@ q0:
 		goto q1;
 	}
 	else if (cod[*pos] == 's') {
-		//printf("\n %c", cod[*pos] );
 		goto q10;
 	}
 	else if (cod[*pos] == 'd') {
@@ -180,55 +180,42 @@ q0:
 		goto q27;
 	}
 	else if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q36;
 	}
 	else if (cod[*pos] == 'f') {
-		//printf("\n %c", cod[*pos] );
 		goto q56;
 	}
 	else if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q98;
 	}
 	else if (cod[*pos] == 'v') {
-		//printf("\n %c", cod[*pos] );
 		goto q106;
 	}
 	else if (cod[*pos] == ';') {
-		//printf("\n %c", cod[*pos] );
 		goto q120;
 	}
 	else if (cod[*pos] == ':') {
-		//printf("\n %c", cod[*pos] );
 		goto q122;
 	}
 	else if (cod[*pos] == ',') {
-		//printf("\n %c", cod[*pos] );
 		goto q124;
 	}
 	else if (cod[*pos] == ')') {
-		//printf("\n %c", cod[*pos] );
 		goto q126;
 	}
 	else if (cod[*pos] == '(') {
-		//printf("\n %c", cod[*pos] );
 		goto q128;
 	}
 	else if (cod[*pos] == '+') {
-		//printf("\n %c", cod[*pos] );
 		goto q130;
 	}
 	else if (cod[*pos] == '-') {
-		//printf("\n %c", cod[*pos] );
 		goto q132;
 	}
 	else if (cod[*pos] == '<') {
-		//printf("\n %c", cod[*pos] );
 		goto q136;
 	}
 	else if (cod[*pos] == '>') {
-		//printf("\n %c", cod[*pos] );
 		goto q142;
 	}
 	else if (cod[*pos] == '=') {
@@ -269,57 +256,47 @@ q0:
 
 
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'c') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
 
 q1: (*pos)++;
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q2;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
 		goto q118;
 	}
 	else {
-		//printf("\n %c", cod[*pos] );
 		goto q666;
 	}
 
 q2: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q3;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
 		goto q118;
 	}
 	else {
-		//printf("\n %c", cod[*pos] );
 		goto q666;
 	}
 
 q3: (*pos)++;
 
 	if (cod[*pos] == 'g') {
-		//printf("\n %c", cod[*pos] );
 		goto q4;
 	}
 	else if (cod[*pos] == 'c') {
-		//printf("\n %c", cod[*pos] );
 		goto q17;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -328,11 +305,9 @@ q3: (*pos)++;
 q4: (*pos)++;
 
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q5;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -341,11 +316,9 @@ q4: (*pos)++;
 q5: (*pos)++;
 
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q6;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -354,11 +327,9 @@ q5: (*pos)++;
 q6: (*pos)++;
 
 	if (cod[*pos] == 'm') {
-		//printf("\n %c", cod[*pos] );
 		goto q7;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -367,11 +338,9 @@ q6: (*pos)++;
 q7: (*pos)++;
 
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q8;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -380,11 +349,9 @@ q7: (*pos)++;
 q8: (*pos)++;
 
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q9;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 q9: (*pos)++;
@@ -393,11 +360,9 @@ q9: (*pos)++;
 q10: (*pos)++;
 
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q11;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -405,15 +370,12 @@ q10: (*pos)++;
 	}
 q11: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q12;
 	}
 	else if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q13;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 q12: (*pos)++;
@@ -421,11 +383,9 @@ q12: (*pos)++;
 
 q13: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q14;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -434,11 +394,9 @@ q13: (*pos)++;
 
 q14: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q15;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -447,11 +405,9 @@ q14: (*pos)++;
 
 q15: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q16;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -460,11 +416,9 @@ q16: (*pos)++;
 
 q17: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q18;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -472,11 +426,9 @@ q17: (*pos)++;
 	}
 q18: (*pos)++;
 	if (cod[*pos] == 'd') {
-		//printf("\n %c", cod[*pos] );
 		goto q19;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -484,11 +436,9 @@ q18: (*pos)++;
 	}
 q19: (*pos)++;
 	if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q20;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -496,11 +446,9 @@ q19: (*pos)++;
 	}
 q20: (*pos)++;
 	if (cod[*pos] == 'm') {
-		//printf("\n %c", cod[*pos] );
 		goto q21;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -508,11 +456,9 @@ q20: (*pos)++;
 	}
 q21: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q22;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -520,11 +466,9 @@ q21: (*pos)++;
 	}
 q22: (*pos)++;
 	if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q23;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -532,11 +476,9 @@ q22: (*pos)++;
 	}
 q23: (*pos)++;
 	if (cod[*pos] == 't') {
-		//printf("\n %c", cod[*pos] );
 		goto q24;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -544,11 +486,9 @@ q23: (*pos)++;
 	}
 q24: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q25;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -556,11 +496,9 @@ q24: (*pos)++;
 	}
 q25: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q26;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 q26: (*pos)++;
@@ -568,11 +506,9 @@ q26: (*pos)++;
 
 q27: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q28;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -580,11 +516,9 @@ q27: (*pos)++;
 	}
 q28: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q29;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -592,7 +526,6 @@ q28: (*pos)++;
 	}
 q29: (*pos)++;
 	if (cod[*pos] == 'l') {
-		//printf("\n %c", cod[*pos] );
 		goto q30;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -604,11 +537,9 @@ q29: (*pos)++;
 	}
 q30: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q31;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -617,11 +548,9 @@ q30: (*pos)++;
 
 q31:(*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q32;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -630,11 +559,9 @@ q31:(*pos)++;
 
 q32:(*pos)++;
 	if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q33;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -643,11 +570,9 @@ q32:(*pos)++;
 
 q33:(*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q34;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -656,11 +581,9 @@ q33:(*pos)++;
 
 q34:(*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q35;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -669,15 +592,12 @@ q35:(*pos)++;
 
 q36: (*pos)++;
 	if (cod[*pos] == 's') {
-		//printf("\n %c", cod[*pos] );
 		goto q37;
 	}
 	else if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q44;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -686,11 +606,9 @@ q36: (*pos)++;
 
 q37: (*pos)++;
 	if (cod[*pos] == 'c') {
-		//printf("\n %c", cod[*pos] );
 		goto q38;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -699,11 +617,9 @@ q37: (*pos)++;
 
 q38: (*pos)++;
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q39;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -712,11 +628,9 @@ q38: (*pos)++;
 
 q39: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q40;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -725,11 +639,9 @@ q39: (*pos)++;
 
 q40: (*pos)++;
 	if (cod[*pos] == 'v') {
-		//printf("\n %c", cod[*pos] );
 		goto q41;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -738,11 +650,9 @@ q40: (*pos)++;
 
 q41: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q42;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -751,11 +661,9 @@ q41: (*pos)++;
 
 q42: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q43;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 q43: (*pos)++;
@@ -763,15 +671,12 @@ q43: (*pos)++;
 
 q44: (*pos)++;
 	if (cod[*pos] == 't') {
-		//printf("\n %c", cod[*pos] );
 		goto q45;
 	}
 	else if (cod[*pos] == 'q') {
-		//printf("\n %c", cod[*pos] );
 		goto q49;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -780,11 +685,9 @@ q44: (*pos)++;
 
 q45: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q46;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -793,11 +696,9 @@ q45: (*pos)++;
 
 q46: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q47;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -806,11 +707,9 @@ q46: (*pos)++;
 
 q47: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q48;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -819,11 +718,9 @@ q48: (*pos)++;
 
 q49: (*pos)++;
 	if (cod[*pos] == 'u') {
-		//printf("\n %c", cod[*pos] );
 		goto q50;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -832,11 +729,9 @@ q49: (*pos)++;
 
 q50: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q51;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -845,11 +740,9 @@ q50: (*pos)++;
 
 q51: (*pos)++;
 	if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q52;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -858,11 +751,9 @@ q51: (*pos)++;
 
 q52: (*pos)++;
 	if (cod[*pos] == 't') {
-		//printf("\n %c", cod[*pos] );
 		goto q53;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -871,11 +762,9 @@ q52: (*pos)++;
 
 q53: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q54;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -884,11 +773,9 @@ q53: (*pos)++;
 
 q54: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q55;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -897,15 +784,12 @@ q55: (*pos)++;
 
 q56: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q57;
 	}
 	else if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q65;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -914,15 +798,12 @@ q56: (*pos)++;
 
 q57: (*pos)++;
 	if (cod[*pos] == 'c') {
-		//printf("\n %c", cod[*pos] );
 		goto q58;
 	}
 	else if (cod[*pos] == 'l') {
-		//printf("\n %c", cod[*pos] );
 		goto q61;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -931,11 +812,9 @@ q57: (*pos)++;
 
 q58: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q59;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -944,11 +823,9 @@ q58: (*pos)++;
 
 q59: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q60;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -957,11 +834,9 @@ q60: (*pos)++;
 
 q61: (*pos)++;
 	if (cod[*pos] == 's') {
-		//printf("\n %c", cod[*pos] );
 		goto q62;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -970,11 +845,9 @@ q61: (*pos)++;
 
 q62: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q63;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -983,11 +856,9 @@ q62: (*pos)++;
 
 q63: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q64;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -996,11 +867,9 @@ q64: (*pos)++;
 
 q65: (*pos)++;
 	if (cod[*pos] == 'm') {
-		//printf("\n %c", cod[*pos] );
 		goto q66;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1009,19 +878,15 @@ q65: (*pos)++;
 
 q66: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q67;
 	}
 	else if (cod[*pos] == 'p') {
-		//printf("\n %c", cod[*pos] );
 		goto q76;
 	}
 	else if (cod[*pos] == 's') {
-		//printf("\n %c", cod[*pos] );
 		goto q95;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1030,11 +895,9 @@ q66: (*pos)++;
 
 q67: (*pos)++;
 	if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q68;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1043,11 +906,9 @@ q67: (*pos)++;
 
 q68: (*pos)++;
 	if (cod[*pos] == 'q') {
-		//printf("\n %c", cod[*pos] );
 		goto q69;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1056,11 +917,9 @@ q68: (*pos)++;
 
 q69: (*pos)++;
 	if (cod[*pos] == 'u') {
-		//printf("\n %c", cod[*pos] );
 		goto q70;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1069,11 +928,9 @@ q69: (*pos)++;
 
 q70: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q71;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1082,11 +939,9 @@ q70: (*pos)++;
 
 q71: (*pos)++;
 	if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q72;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1095,11 +950,9 @@ q71: (*pos)++;
 
 q72: (*pos)++;
 	if (cod[*pos] == 't') {
-		//printf("\n %c", cod[*pos] );
 		goto q73;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1108,11 +961,9 @@ q72: (*pos)++;
 
 q73: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q74;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1121,11 +972,9 @@ q73: (*pos)++;
 
 q74: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q75;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -1134,11 +983,9 @@ q75: (*pos)++;
 
 q76: (*pos)++;
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q77;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1147,11 +994,9 @@ q76: (*pos)++;
 
 q77: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q78;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1160,15 +1005,12 @@ q77: (*pos)++;
 
 q78: (*pos)++;
 	if (cod[*pos] == 'c') {
-		//printf("\n %c", cod[*pos] );
 		goto q79;
 	}
 	else if (cod[*pos] == 'g') {
-		//printf("\n %c", cod[*pos] );
 		goto q89;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1177,11 +1019,9 @@ q78: (*pos)++;
 
 q79: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q80;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1190,11 +1030,9 @@ q79: (*pos)++;
 
 q80: (*pos)++;
 	if (cod[*pos] == 'd') {
-		//printf("\n %c", cod[*pos] );
 		goto q81;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1203,11 +1041,9 @@ q80: (*pos)++;
 
 q81: (*pos)++;
 	if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q82;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1216,7 +1052,6 @@ q81: (*pos)++;
 
 q82: (*pos)++;
 	if (cod[*pos] == 'm') {
-		//printf("\n %c", cod[*pos] );
 		goto q83;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1229,11 +1064,9 @@ q82: (*pos)++;
 
 q83: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q84;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1246,7 +1079,6 @@ q84: (*pos)++;
 		goto q85;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1259,7 +1091,6 @@ q85: (*pos)++;
 		goto q86;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1268,11 +1099,9 @@ q85: (*pos)++;
 
 q86: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q87;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1281,7 +1110,6 @@ q86: (*pos)++;
 
 q87: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q88;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1298,7 +1126,6 @@ q89: (*pos)++;
 		goto q90;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1307,11 +1134,9 @@ q89: (*pos)++;
 
 q90: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q91;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1320,11 +1145,9 @@ q90: (*pos)++;
 
 q91: (*pos)++;
 	if (cod[*pos] == 'm') {
-		//printf("\n %c", cod[*pos] );
 		goto q92;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1333,11 +1156,9 @@ q91: (*pos)++;
 
 q92: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q93;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1346,11 +1167,9 @@ q92: (*pos)++;
 
 q93: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q94;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -1359,11 +1178,9 @@ q94: (*pos)++;
 
 q95: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q96;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1372,11 +1189,9 @@ q95: (*pos)++;
 
 q96: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q97;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -1385,11 +1200,9 @@ q97: (*pos)++;
 
 q98: (*pos)++;
 	if (cod[*pos] == 'n') {
-		//printf("\n %c", cod[*pos] );
 		goto q99;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1398,11 +1211,9 @@ q98: (*pos)++;
 
 q99: (*pos)++;
 	if (cod[*pos] == 't') {
-		//printf("\n %c", cod[*pos] );
 		goto q100;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1411,11 +1222,9 @@ q99: (*pos)++;
 
 q100: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q101;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1424,11 +1233,9 @@ q100: (*pos)++;
 
 q101: (*pos)++;
 	if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q102;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1437,11 +1244,9 @@ q101: (*pos)++;
 
 q102: (*pos)++;
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q103;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1450,11 +1255,9 @@ q102: (*pos)++;
 
 q103: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q104;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1463,11 +1266,9 @@ q103: (*pos)++;
 
 q104: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q105;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -1476,11 +1277,9 @@ q105: (*pos)++;
 
 q106: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q107;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1489,11 +1288,9 @@ q106: (*pos)++;
 
 q107: (*pos)++;
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q108;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1502,11 +1299,9 @@ q107: (*pos)++;
 
 q108: (*pos)++;
 	if (cod[*pos] == 'd') {
-		//printf("\n %c", cod[*pos] );
 		goto q109;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1515,11 +1310,9 @@ q108: (*pos)++;
 
 q109: (*pos)++;
 	if (cod[*pos] == 'a') {
-		//printf("\n %c", cod[*pos] );
 		goto q110;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1528,11 +1321,9 @@ q109: (*pos)++;
 
 q110: (*pos)++;
 	if (cod[*pos] == 'd') {
-		//printf("\n %c", cod[*pos] );
 		goto q111;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1541,11 +1332,9 @@ q110: (*pos)++;
 
 q111: (*pos)++;
 	if (cod[*pos] == 'e') {
-		//printf("\n %c", cod[*pos] );
 		goto q112;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1554,11 +1343,9 @@ q111: (*pos)++;
 
 q112: (*pos)++;
 	if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q113;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1567,11 +1354,9 @@ q112: (*pos)++;
 
 q113: (*pos)++;
 	if (cod[*pos] == 'r') {
-		//printf("\n %c", cod[*pos] );
 		goto q114;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1580,11 +1365,9 @@ q113: (*pos)++;
 
 q114: (*pos)++;
 	if (cod[*pos] == 'o') {
-		//printf("\n %c", cod[*pos] );
 		goto q115;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1593,11 +1376,9 @@ q114: (*pos)++;
 
 q115: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q116;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 
@@ -1606,7 +1387,6 @@ q116: (*pos)++;
 
 q117:(*pos)++;
 	if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1618,7 +1398,6 @@ q118:(*pos)++;
 
 q120: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q121;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1642,7 +1421,6 @@ q123: (*pos)++;
 
 q124: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q125;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1654,7 +1432,6 @@ q125: (*pos)++;
 
 q126: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q127;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1666,7 +1443,6 @@ q127: (*pos)++;
 
 q128: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q129;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1678,7 +1454,6 @@ q129: (*pos)++;
 
 q130: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q131;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1690,7 +1465,6 @@ q131: (*pos)++;
 
 q132: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q133;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1713,15 +1487,12 @@ q135: (*pos)++;
 
 q136: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q137;
 	}
 	else if ((cod[*pos] == '=')) {
-		//printf("\n %c", cod[*pos] );
 		goto q138;
 	}
 	else if ((cod[*pos] == '>')) {
-		//printf("\n %c", cod[*pos] );
 		goto q140;
 	};
 
@@ -1730,7 +1501,6 @@ q137: (*pos)++;
 
 q138: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q139;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1742,7 +1512,6 @@ q139: (*pos)++;
 
 q140: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q141;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1754,11 +1523,9 @@ q141: (*pos)++;
 
 q142: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q143;
 	}
 	else if ((cod[*pos] == '=')) {
-		//printf("\n %c", cod[*pos] );
 		goto q144;
 	};
 
@@ -1767,7 +1534,6 @@ q143: (*pos)++;
 
 q144: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q145;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1779,11 +1545,9 @@ q145: (*pos)++;
 
 q146: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q147;
 	}
 	else if ((cod[*pos] == '=')) {
-		//printf("\n %c", cod[*pos] );
 		goto q148;
 	};
 
@@ -1792,7 +1556,6 @@ q147: (*pos)++;
 
 q148: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q149;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1804,11 +1567,9 @@ q149: (*pos)++;
 
 q150: (*pos)++;
 	if (cod[*pos] == 'i') {
-		//printf("\n %c", cod[*pos] );
 		goto q151;
 	}
 	else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
-		//printf("\n %c", cod[*pos] );
 		goto q117;
 	}
 	else if (cod[*pos] == ' ') {
@@ -1817,7 +1578,6 @@ q150: (*pos)++;
 
 q151: (*pos)++;
 	if (cod[*pos] == 'v') {
-		//printf("\n %c", cod[*pos] );
 		goto q152;
 		//	 	}else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')){
 		//			printf("\n %c", cod[*pos] );
@@ -1829,7 +1589,6 @@ q151: (*pos)++;
 
 q152: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q153;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -1855,7 +1614,6 @@ q154: (*pos)++;
 
 q155: (*pos)++;
 	if (cod[*pos] == 'l') {
-		//printf("\n %c", cod[*pos] );
 		goto q156;
 		//	 	}else  if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')){
 		//			printf("\n %c", cod[*pos] );
@@ -1867,7 +1625,6 @@ q155: (*pos)++;
 
 q156: (*pos)++;
 	if (cod[*pos] == ' ') {
-		//printf("\n %c", cod[*pos] );
 		goto q157;
 	}
 	else if ((cod[*pos] == 'A') || (cod[*pos] == 'B') || (cod[*pos] == 'C') || (cod[*pos] == 'D') || (cod[*pos] == 'E') || (cod[*pos] == 'F') || (cod[*pos] == 'G') || (cod[*pos] == 'H') || (cod[*pos] == 'I') || (cod[*pos] == 'J') || (cod[*pos] == 'K') || (cod[*pos] == 'L') || (cod[*pos] == 'M') || (cod[*pos] == 'N') || (cod[*pos] == 'O') || (cod[*pos] == 'P') || (cod[*pos] == 'Q') || (cod[*pos] == 'R') || (cod[*pos] == 'S') || (cod[*pos] == 'T') || (cod[*pos] == 'U') || (cod[*pos] == 'V') || (cod[*pos] == 'W') || (cod[*pos] == 'X') || (cod[*pos] == 'Y') || (cod[*pos] == 'Z') || (cod[*pos] == 'a') || (cod[*pos] == 'b') || (cod[*pos] == 'c') || (cod[*pos] == 'd') || (cod[*pos] == 'e') || (cod[*pos] == 'f') || (cod[*pos] == 'g') || (cod[*pos] == 'h') || (cod[*pos] == 'i') || (cod[*pos] == 'j') || (cod[*pos] == 'k') || (cod[*pos] == 'l') || (cod[*pos] == 'm') || (cod[*pos] == 'n') || (cod[*pos] == 'o') || (cod[*pos] == 'p') || (cod[*pos] == 'q') || (cod[*pos] == 'r') || (cod[*pos] == 's') || (cod[*pos] == 't') || (cod[*pos] == 'u') || (cod[*pos] == 'v') || (cod[*pos] == 'w') || (cod[*pos] == 'x') || (cod[*pos] == 'y') || (cod[*pos] == 'z')) {
@@ -2238,13 +1995,18 @@ bool atribuicao() {
 	int temp = SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor;
 	if (variavel(temp) == true) {
 		int j;
+		bool a=false;
 		char* variavelTemp = SEQ_TOKENS[NUM_TOKEN_ATUAL-1].caracter;
 		for (j = 0; j < INDICE_SIMBOLO; j++) {
 			if (strcmp(TABELA_SIMBOLOS[j].variavel_nome, variavelTemp) == 0) {
 				tipoValido[itipoValido++] = TABELA_SIMBOLOS[j].variavel_tipo;
+				a = true;
 				break;
 			}
 		}
+			if (a == false) printf("Erro semantico, variavel nao encontrada!\n");
+
+			a = false;
 		if (SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor == ATRIBUICAO) {
 			char* valorTemp = SEQ_TOKENS[NUM_TOKEN_ATUAL].caracter;
 			
@@ -2293,8 +2055,6 @@ bool chamada_procedimento() {
 		if (temp == PONTOEVIRGULA) {
 			return true;
 		}
-		//printf("PARAM: %d\n", temp);
-		//printf("PARAM: %d\n", SEQ_TOKENS[NUM_TOKEN_ATUAL]);
 		else if (temp == PARENTESEESQ) {
 			if (lista_parametros() == true) {
 				printf("PARAM: %d\n", SEQ_TOKENS[NUM_TOKEN_ATUAL]);
@@ -2445,7 +2205,7 @@ bool comando_repetitivo() {
 bool expressao() {
 	if (expressao_simples() == true) {
 		if (relacao(SEQ_TOKENS[NUM_TOKEN_ATUAL++].valor) == true) {
-			if (tipoValido[itipoValido-1] != INTEIRO) printf("Erro semantico, Operação com tipo invalido!");
+			if (tipoValido[itipoValido-1] != INTEIRO) printf("Erro semantico, Operação com tipo invalido!\n");
 			if (expressao_simples() == true) {
 				return true;
 			}
@@ -2493,7 +2253,7 @@ bool expressao_simples() {
 	int temp = SEQ_TOKENS[NUM_TOKEN_ATUAL].valor;
 
 	if (temp == MAIS || temp == MENOS) {
-		if (tipoValido[itipoValido-1] != INTEIRO)printf("Erro semantico, atribuição de variaveis de tipos diferentes!");
+		if (tipoValido[itipoValido-1] != INTEIRO)printf("Erro semantico, atribuição de variaveis de tipos diferentes!\n");
 		NUM_TOKEN_ATUAL++;
 		if (termo() == true) {
 			verif_exp = true;
@@ -2547,24 +2307,24 @@ bool fator() {
 		}
 
 		if(!(cheguei % 103 == 0 || cheguei % 104 == 0))
-			printf("Erro! atribuicao de tipos diferentes!");
+			printf("Erro! atribuicao de tipos diferentes!\n");
 		
 	
-		if (varValida != true)printf("Erro semantico, variavel fora do escopo, ou não existe!");
+		if (varValida != true)printf("Erro semantico, variavel fora do escopo, ou não existe!\n");
 		varValida = false;
 
 
 		return true;
 	}
 	else if (numero(temp)) {
-		if (tipoValido[itipoValido-1] != INTEIRO)
-			printf("Erro semantico, atribuicao de variaveis de tipos diferentes!\n");
+		if (tipoValido[itipoValido - 1] != INTEIRO)
+			printf("Erro semantico, na variavel! %s\n", SEQ_TOKENS[NUM_TOKEN_ATUAL-3].caracter);
 		return true;
 	}
 
 	else if (bool1(temp)) {
 		if (tipoValido[itipoValido-1] != BOOLEANO)
-			printf("Erro semantico, atribuicao de variaveis de tipos diferentes!\n");
+			printf("Erro semantico, na variavel! %s\n", SEQ_TOKENS[NUM_TOKEN_ATUAL].caracter);
 		return true;
 	}
 
